@@ -85,3 +85,57 @@ Here’s a detailed description of your **PC Builder System** code, along with p
 
 4. **Advanced Features**:
    - Add features like a shopping list, automatic tax and shipping cost calculation, or a feature that suggests the best components within the given budget.
+
+
+  The time complexity analysis of PC Builder System program can be broken down as follows:
+
+### Time Complexity: 
+### **Time Complexity for New Developers: A Concise Explanation**
+
+Time complexity is a measure of how the execution time of an algorithm changes as the input size increases. It's usually expressed using **Big O notation**, which describes the worst-case scenario for an algorithm’s performance.
+
+- **O(1)**: Constant time — Execution time does not depend on input size.
+- **O(n)**: Linear time — Execution time increases linearly with input size.
+- **O(n²)**: Quadratic time — Execution time grows quadratically with input size.
+
+### **Why Companies Prefer Lower Time Complexity**
+
+Companies and developers prefer programs with lower time complexity because they run faster, especially as the input size grows. Efficient algorithms reduce the load on system resources and scale better, making them ideal for real-world applications. Lower time complexity (like **O(1)** or **O(n)**) results in better performance, faster response times, and an overall smoother user experience. 
+
+### **Example:**
+Your code’s time complexity is **O(1)**, meaning its performance is constant regardless of the number of categories or choices available. This makes it efficient and highly scalable. 
+
+For instance, a program that adds more categories or options without affecting the performance is preferred in industries with high data volumes or fast-paced environments. 
+
+**My  Program's Complexity:**  
+- **Main Loop**: The `do-while` loop continues to prompt the user for input until they exit (by entering `0`). In each iteration, the program offers a selection of categories (1-6) and handles the corresponding input. The loop itself runs for at most `n` iterations, where `n` is the number of categories selected before the user exits. Therefore, the time complexity of the loop is **O(n)**.
+
+- **Switch Case (Category Selection)**: Each category selection (1-6) involves checking the input and then displaying the available options, which requires constant time. For each category, there is a further prompt to select a component, with 3 possible options. The complexity for each case is **O(1)** since it only involves simple checks and assignments.
+
+- **Total Time Complexity**: Since each iteration of the loop involves a constant amount of work (due to the switch case), the overall time complexity is **O(n)**, where `n` is the number of iterations (i.e., how many times the user chooses a category and makes a selection). The time complexity is linear with respect to the number of selections.
+
+### Space Complexity:
+The space complexity is **O(1)** because the program uses a fixed number of variables (`propPrice`, `mtbpPrice`, `mempPrice`, `gcpPrice`, `strpPrice`, `csgpPrice`, and others) to store the prices and user input, regardless of the size of the input. Therefore, the space required does not grow with the input size.
+
+
+
+In summary, the time complexity of your program is **O(n)**, where `n` is the number of user selections (iterations), and the space complexity is **O(1)** since the program uses a constant amount of space.
+
+  ### Developer Consideration:
+
+#### **Would a Developer Consider This?**
+Yes, a developer would likely consider this code as a simple and effective way to build an interactive system for selecting computer components. However, there are some aspects to consider before using it in production or as part of a larger project.
+
+#### **Pros:**
+1. **Simplicity and Clarity**: The code is straightforward, making it easy to understand for beginners.
+2. **User-friendly**: It allows the user to interact with the system in a clear, intuitive manner by making selections from a list of available components.
+3. **Customizable**: It’s easy to update the components or prices in the future.
+
+#### **Cons:**
+1. **Scalability**: If the number of components or categories increases significantly, the program could become harder to manage. Adding new categories would require modifying the code for each option in the switch-case block. This could make the code less maintainable.
+2. **Lack of Error Handling**: The error handling for invalid input is minimal, which could lead to user confusion. For instance, if the user inputs an invalid number or a non-numeric value, the program might behave unexpectedly.
+3. **No Input Validation for Budget**: There's no validation for the budget input. If the user enters a non-numeric value, it could cause issues or crashes.
+4. **Repetitive Code**: The structure for each category selection is nearly identical. A more scalable solution might involve using arrays or structures to store prices and choices, reducing the redundancy in the code.
+
+#### **Conclusion:**
+While the program is easy to understand and could serve as a basic prototype for a PC Builder system, a developer would consider optimizing it for scalability, maintainability, and robustness, especially for more complex systems. Implementing features like input validation, error handling, and refactoring the code for modularity would make it more production-ready.
