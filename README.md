@@ -103,7 +103,7 @@ Time complexity is a measure of how the execution time of an algorithm changes a
 Companies and developers prefer programs with lower time complexity because they run faster, especially as the input size grows. Efficient algorithms reduce the load on system resources and scale better, making them ideal for real-world applications. Lower time complexity (like **O(1)** or **O(n)**) results in better performance, faster response times, and an overall smoother user experience. 
 
 ### **Example:**
-Your code’s time complexity is **O(1)**, meaning its performance is constant regardless of the number of categories or choices available. This makes it efficient and highly scalable. 
+my code’s time complexity is **O(1)**, meaning its performance is constant regardless of the number of categories or choices available. This makes it efficient and highly scalable. 
 
 For instance, a program that adds more categories or options without affecting the performance is preferred in industries with high data volumes or fast-paced environments. 
 
@@ -119,7 +119,7 @@ The space complexity is **O(1)** because the program uses a fixed number of vari
 
 
 
-In summary, the time complexity of your program is **O(n)**, where `n` is the number of user selections (iterations), and the space complexity is **O(1)** since the program uses a constant amount of space.
+In summary, the time complexity of my program is **O(n)**, where `n` is the number of user selections (iterations), and the space complexity is **O(1)** since the program uses a constant amount of space.
 
   ### Developer Consideration:
 
